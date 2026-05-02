@@ -1,0 +1,56 @@
+/* Workshops specific styling */
+
+/* Tab navigation for workshops */
+.workshops-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 20;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.workshop-tab {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    border: 2px solid var(--charcoal-gray, #2E2E2E);
+    background: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--charcoal-gray, #2E2E2E);
+}
+
+.workshop-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px var(--soft-mint, #9CDBC9);
+}
+
+.workshop-tab.active {
+    background-color: var(--soft-mint, #9CDBC9);
+    border-color: var(--charcoal-gray, #2E2E2E);
+    box-shadow: 3px 3px 0px var(--charcoal-gray, #2E2E2E);
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* Hide workshop sections by default, show only active */
+.workshop-section {
+    display: none;
+    width: 100%;
+}
+
+.workshop-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

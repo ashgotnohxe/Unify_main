@@ -1,0 +1,51 @@
+/* Sports specific styling */
+
+/* Tab navigation for sports */
+.sports-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 20;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.sport-tab {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    border: 2px solid var(--charcoal-gray, #2E2E2E);
+    background: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--charcoal-gray, #2E2E2E);
+}
+
+.sport-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px var(--pastel-lavender, #9B96C7);
+}
+
+.sport-tab.active {
+    background-color: var(--pastel-lavender, #9B96C7);
+    border-color: var(--charcoal-gray, #2E2E2E);
+    box-shadow: 3px 3px 0px var(--charcoal-gray, #2E2E2E);
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* Hide sport sections by default, show only active */
+.sport-section {
+    display: none;
+    width: 100%;
+}
+
+.sport-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out;
+}

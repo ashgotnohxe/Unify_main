@@ -1,0 +1,67 @@
+/* Clubs specific styling */
+
+/* Tab navigation for clubs */
+.clubs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5rem;
+    z-index: 20;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.club-tab {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    border: 2px solid var(--scribble-ink, #3E3B36);
+    background: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--scribble-ink, #3E3B36);
+}
+
+.club-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px var(--scribble-highlight, #A5D0EB);
+}
+
+.club-tab.active {
+    background-color: var(--scribble-highlight, #A5D0EB);
+    border-color: var(--scribble-ink, #3E3B36);
+    box-shadow: 3px 3px 0px var(--scribble-ink, #3E3B36);
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* Hide club sections by default, show only active */
+.club-section {
+    display: none;
+    width: 100%;
+}
+
+.club-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Adjust header spacing */
+.club-header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.club-header h2 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+}

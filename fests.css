@@ -1,0 +1,51 @@
+/* Fests specific styling */
+
+/* Tab navigation for fests */
+.fests-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 20;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.fest-tab {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    padding: 10px 25px;
+    border: 2px solid var(--charcoal-gray, #2E2E2E);
+    background: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--charcoal-gray, #2E2E2E);
+}
+
+.fest-tab:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0px var(--blush-peach, #EDBAA1);
+}
+
+.fest-tab.active {
+    background-color: var(--blush-peach, #EDBAA1);
+    border-color: var(--charcoal-gray, #2E2E2E);
+    box-shadow: 3px 3px 0px var(--charcoal-gray, #2E2E2E);
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* Hide fest sections by default, show only active */
+.fest-section {
+    display: none;
+    width: 100%;
+}
+
+.fest-section.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease-in-out;
+}

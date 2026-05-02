@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIFY - Clubs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scribble.css">
+    <link rel="stylesheet" href="clubs.css">
+</head>
+
+<body>
+
+    <!-- Background Doodles -->
+    <div class="background-doodles">
+        <svg class="doodle star-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.4 9.6H22.4L16 14.4L18.4 22L12 17.2L5.6 22L8 14.4L1.6 9.6H9.6L12 2Z" fill="#F3D6C6" opacity="0.8" />
+        </svg>
+        <svg class="doodle cloud-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.132 20.177 10.244 17.819 10.034C17.6 7.227 15.266 5 12.5 5C10.158 5 8.113 6.591 7.422 8.791C4.945 9.074 3 11.233 3 14C3 16.761 5.239 19 8 19H17.5Z" fill="#FFFFFF" fill-opacity="0.9" />
+        </svg>
+        <svg class="doodle bulb-event" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18H15M10 21H14M5.6 10C5.6 6.465 8.465 3.6 12 3.6C15.535 3.6 18.4 6.465 18.4 10C18.4 12.8 16.6 15.2 14 16H10C7.4 15.2 5.6 12.8 5.6 10Z" stroke="#F3D6C6" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+        </svg>
+        <svg class="doodle mic-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" fill="#A5D0EB" opacity="0.8" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+            <line x1="12" y1="19" x2="12" y2="23" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+            <line x1="8" y1="23" x2="16" y2="23" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg class="doodle trophy-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 21h8m-4-9v9m-8-3a2 2 0 1 1-2-2c.4 0 .9.2 1.2.5l.8.8V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v12.3l.8-.8c.3-.3.8-.5 1.2-.5a2 2 0 1 1-2 2" stroke="#EDBAA1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg class="doodle palette-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10c0.5 0 1-0.5 1-1v-2c0-1.5 1.5-2 2-2 1.5 0 2-1.5 2-2v-1c0-1.5 1.5-2 2-2h1c1.5 0 2-1.5 2-2 0-3.5-3.5-8-10-8z" fill="#9CDBC9" opacity="0.7" />
+            <circle cx="7.5" cy="7.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="11.5" cy="11.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="6.5" cy="12.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+        </svg>
+        <svg class="doodle gamepad-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="20" height="12" rx="6" stroke="#9B96C7" stroke-width="2" />
+            <path d="M6 12h4m-2-2v4" stroke="#9B96C7" stroke-width="2" stroke-linecap="round" />
+            <circle cx="16" cy="12" r="1" fill="#9B96C7" />
+            <circle cx="18" cy="10" r="1" fill="#9B96C7" />
+        </svg>
+        <svg class="doodle pizza-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 22h20L12 2z" stroke="#F3D6C6" stroke-width="2" stroke-linejoin="round" />
+            <circle cx="12" cy="12" r="2" fill="#F3D6C6" opacity="0.8" />
+            <circle cx="10" cy="16" r="1.5" fill="#F3D6C6" opacity="0.8" />
+            <circle cx="14" cy="16" r="1.5" fill="#F3D6C6" opacity="0.8" />
+        </svg>
+        <svg class="doodle star-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l3 7h7l-5 5 2 7-7-5-7 5 2-7-5-5h7z" fill="#9B96C7" opacity="0.6" />
+        </svg>
+        <svg class="doodle star-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l3 7h7l-5 5 2 7-7-5-7 5 2-7-5-5h7z" stroke="#A5D0EB" stroke-width="2" opacity="0.8" />
+        </svg>
+        <svg class="doodle squiggle-2" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 10 Q 12 0, 25 10 T 48 10" stroke="#EDBAA1" stroke-width="2" stroke-linecap="round" fill="none" />
+        </svg>
+        <svg class="doodle squiggle-1" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10C15 0 25 20 35 10C45 0 55 20 65 10C75 0 85 20 95 10" stroke="#A5D0EB" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+        </svg>
+        <svg class="doodle planet-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8" stroke="#9B96C7" stroke-width="2" />
+            <path d="M2 12C2 12 5 7 12 7C19 7 22 12 22 12" stroke="#9B96C7" stroke-width="2" opacity="0.85" />
+            <path d="M2 12C2 12 5 17 12 17C19 17 22 12 22 12" stroke="#9B96C7" stroke-width="2" opacity="0.85" stroke-dasharray="2 2" />
+        </svg>
+        <svg class="doodle balloon-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12Z" fill="#9B96C7" opacity="0.85" />
+            <path d="M12 12V24" stroke="#2E2E2E" stroke-width="1" opacity="0.8" />
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="eventspage.html" class="back-arrow" style="position: absolute; top: 20px; left: 20px; font-family: 'Patrick Hand', cursive; font-size: 1.5rem; color: #2e2e2e; text-decoration: none; z-index: 100;">← Back to Events</a>
+    </nav>
+
+    <!-- Club Tabs Navigation -->
+    <div class="clubs-nav" id="clubsNav">
+        <button class="club-tab" data-target="coding_ninjas">Coding Ninjas</button>
+        <button class="club-tab" data-target="evolve_ai">Evolve AI</button>
+        <button class="club-tab" data-target="meredian">Meredian</button>
+        <button class="club-tab" data-target="vibinz">Vibin'Z</button>
+        <button class="club-tab" data-target="gfg">Geeks for Geeks</button>
+    </div>
+
+    <!-- ==================== CODING NINJAS ==================== -->
+    <div id="coding_ninjas" class="club-section">
+        <header class="club-header">
+            <h2>Coding Ninjas</h2>
+        </header>
+        <h1 class="scribble-title" style="margin-top: 1rem;">
+            <span>U</span><span>P</span><span>D</span><span>A</span><span>T</span><span>E</span><span>S</span>
+        </h1>
+        <main class="events-container">
+            <!-- Event 1 -->
+            <article class="scribble-wrapper" onclick="openModal('Intro Session', 'This session is the perfect starting point for your coding journey. We will cover the basics of Data Structures, setup your dev environment, and solve your very first competitive problem together!', 'Mon, 12th Feb', '5:00 PM - 7:00 PM', 'Lab 1, CS Dept')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M30,100 C30,40 60,20 100,20 C150,20 180,50 180,100 C180,150 150,180 100,180 C50,180 20,150 20,100 C20,60 40,30 90,30 C140,30 170,60 170,110" />
+                    <path class="scribble-path" d="M35,105 C35,45 65,25 105,25 C155,25 185,55 185,105 C185,155 155,185 105,185 C55,185 25,155 25,105" opacity="0.6" style="animation-delay: 0.2s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Intro Session</h2>
+                    <p>Kickstart your journey.</p>
+                    <span class="scribble-date">Mon, 5 PM</span>
+                </div>
+            </article>
+            <!-- Event 2 -->
+            <article class="scribble-wrapper" onclick="openModal('Code Wars', 'A high-intensity competitive coding battle. Test your logic, speed, and accuracy against the best coders on campus! Prizes for the top 3 performers.', 'Wed, 14th Feb', '6:00 PM - 8:00 PM', 'Lab 2, CS Dept')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M20,90 C20,30 50,10 100,15 C160,20 190,60 185,110 C180,160 140,190 90,185 C40,180 15,140 20,90 C25,50 60,20 110,25" />
+                    <path class="scribble-path" d="M25,95 C25,35 55,15 105,20 C165,25 195,65 190,115 C185,165 145,195 95,190 C45,185 20,145 25,95" opacity="0.6" style="animation-delay: 0.3s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Code Wars</h2>
+                    <p>Competitive Coding Battle.</p>
+                    <span class="scribble-date">Wed, 6 PM</span>
+                </div>
+            </article>
+            <!-- Event 3 -->
+            <article class="scribble-wrapper" onclick="openModal('Mentorship', 'One-on-one guidance from senior developers. Review your code, get career advice, and plan your learning path effectively.', 'Fri, 16th Feb', '4:00 PM - 5:00 PM', 'Library Discussion Room')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M20,90 C20,30 50,10 100,15 C160,20 190,60 185,110 C180,160 140,190 90,185 C40,180 15,140 20,90 C25,50 60,20 110,25" />
+                    <path class="scribble-path" d="M25,95 C25,35 55,15 105,20 C165,25 195,65 190,115 C185,165 145,195 95,190 C45,185 20,145 25,95" opacity="0.6" style="animation-delay: 0.3s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Mentorship</h2>
+                    <p>Learn from Seniors.</p>
+                    <span class="scribble-date">Fri, 4 PM</span>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- ==================== EVOLVE AI ==================== -->
+    <div id="evolve_ai" class="club-section">
+        <header class="club-header">
+            <h2>Evolve AI</h2>
+        </header>
+        <h1 class="scribble-title" style="margin-top: 1rem;">
+            <span>U</span><span>P</span><span>D</span><span>A</span><span>T</span><span>E</span><span>S</span>
+        </h1>
+        <main class="events-container">
+            <!-- Event 1 -->
+            <article class="scribble-wrapper" onclick="openModal('Weekly Meetup', 'Dive deep into Large Language Models and Computer Vision. We will discuss the latest papers and share project updates.', 'Thu, 15th Feb', '4:30 PM - 6:00 PM', 'AI Lab')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M30,100 C30,40 60,20 100,20 C150,20 180,50 180,100 C180,150 150,180 100,180 C50,180 20,150 20,100 C20,60 40,30 90,30 C140,30 170,60 170,110" />
+                    <path class="scribble-path" d="M35,105 C35,45 65,25 105,25 C155,25 185,55 185,105 C185,155 155,185 105,185 C55,185 25,155 25,105" opacity="0.6" style="animation-delay: 0.2s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Weekly Meetup</h2>
+                    <p>LLMs & Vision Talk.</p>
+                    <span class="scribble-date">Thu, 4:30 PM</span>
+                </div>
+            </article>
+            <!-- Event 2 -->
+            <article class="scribble-wrapper" onclick="openModal('Ethics in AI', 'A crucial discussion on the ethical implications of AI deployment. Guest lecture by Dr. S followed by Q&A.', 'Fri, 23rd Feb', '5:00 PM - 6:30 PM', 'Seminar Hall A')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M20,90 C20,30 50,10 100,15 C160,20 190,60 185,110 C180,160 140,190 90,185 C40,180 15,140 20,90 C25,50 60,20 110,25" />
+                    <path class="scribble-path" d="M25,95 C25,35 55,15 105,20 C165,25 195,65 190,115 C185,165 145,195 95,190 C45,185 20,145 25,95" opacity="0.6" style="animation-delay: 0.3s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Ethics in AI</h2>
+                    <p>Guest Lecture.</p>
+                    <span class="scribble-date">Next Friday</span>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- ==================== MEREDIAN ==================== -->
+    <div id="meredian" class="club-section">
+        <header class="club-header">
+            <h2>Meredian</h2>
+        </header>
+        <h1 class="scribble-title" style="margin-top: 1rem;">
+            <span>U</span><span>P</span><span>D</span><span>A</span><span>T</span><span>E</span><span>S</span>
+        </h1>
+        <main class="events-container">
+            <!-- Event 1 -->
+            <article class="scribble-wrapper" onclick="openModal('Ink & Quill', 'Unleash your creativity! Join our creative writing workshop where we explore prompt-based storytelling and character development.', 'Wed, 14th Feb', '3:00 PM - 5:00 PM', 'Room 304')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M30,100 C30,40 60,20 100,20 C150,20 180,50 180,100 C180,150 150,180 100,180 C50,180 20,150 20,100 C20,60 40,30 90,30 C140,30 170,60 170,110" />
+                    <path class="scribble-path" d="M35,105 C35,45 65,25 105,25 C155,25 185,55 185,105 C185,155 155,185 105,185 C55,185 25,155 25,105" opacity="0.6" style="animation-delay: 0.2s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Ink & Quill</h2>
+                    <p>Creative Writing.</p>
+                    <span class="scribble-date">Wed, 3 PM</span>
+                </div>
+            </article>
+            <!-- Event 2 -->
+            <article class="scribble-wrapper" onclick="openModal('Debate Practice', 'Sharpen your argumentation skills. We will be practicing for the upcoming inter-college debate championship with mock rounds.', 'Fri, 16th Feb', '4:00 PM - 6:00 PM', 'Conference Room')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M20,90 C20,30 50,10 100,15 C160,20 190,60 185,110 C180,160 140,190 90,185 C40,180 15,140 20,90 C25,50 60,20 110,25" />
+                    <path class="scribble-path" d="M25,95 C25,35 55,15 105,20 C165,25 195,65 190,115 C185,165 145,195 95,190 C45,185 20,145 25,95" opacity="0.6" style="animation-delay: 0.3s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Debate Club</h2>
+                    <p>Weekly Practice.</p>
+                    <span class="scribble-date">Fri, 4 PM</span>
+                </div>
+            </article>
+            <!-- Event 3 -->
+            <article class="scribble-wrapper" onclick="openModal('Poetry Slam', 'An open mic night for poets and spoken word artists. Theme: \'Retro Future\'. Come share your verses!', 'TBA', 'TBA', 'Main Auditorium')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M20,90 C20,30 50,10 100,15 C160,20 190,60 185,110 C180,160 140,190 90,185 C40,180 15,140 20,90 C25,50 60,20 110,25" />
+                    <path class="scribble-path" d="M25,95 C25,35 55,15 105,20 C165,25 195,65 190,115 C185,165 145,195 95,190 C45,185 20,145 25,95" opacity="0.6" style="animation-delay: 0.3s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Poetry Slam</h2>
+                    <p>Open Mic Night.</p>
+                    <span class="scribble-date">TBA</span>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- ==================== VIBIN'Z ==================== -->
+    <div id="vibinz" class="club-section">
+        <header class="club-header">
+            <h2>Vibin'Z</h2>
+        </header>
+        <h1 class="scribble-title" style="margin-top: 1rem;">
+            <span>U</span><span>P</span><span>D</span><span>A</span><span>T</span><span>E</span><span>S</span>
+        </h1>
+        <main class="events-container">
+            <!-- Event 1 -->
+            <article class="scribble-wrapper" onclick="openModal('Acoustic Sunset', 'Chill vibes and acoustic tunes. Bring your instrument or just come to listen and relax under the stars.', 'Sat, 17th Feb', '6:00 PM - 9:00 PM', 'Amphitheatre')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M30,100 C30,40 60,20 100,20 C150,20 180,50 180,100 C180,150 150,180 100,180 C50,180 20,150 20,100 C20,60 40,30 90,30 C140,30 170,60 170,110" />
+                    <path class="scribble-path" d="M35,105 C35,45 65,25 105,25 C155,25 185,55 185,105 C185,155 155,185 105,185 C55,185 25,155 25,105" opacity="0.6" style="animation-delay: 0.2s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Acoustic Sunset</h2>
+                    <p>Open Mic Night.</p>
+                    <span class="scribble-date">Sat, 6 PM</span>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- ==================== GEEKS FOR GEEKS ==================== -->
+    <div id="gfg" class="club-section">
+        <header class="club-header">
+            <h2>Geeks for Geeks</h2>
+        </header>
+        <h1 class="scribble-title" style="margin-top: 1rem;">
+            <span>U</span><span>P</span><span>D</span><span>A</span><span>T</span><span>E</span><span>S</span>
+        </h1>
+        <main class="events-container">
+            <!-- Event 1 -->
+            <article class="scribble-wrapper" onclick="openModal('Hard LeetCode', 'We tackle the toughest problems on LeetCode. A collaborative problem solving session for advanced coders who love a challenge.', 'Tue, 13th Feb', '5:30 PM - 7:30 PM', 'Lab 3')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M30,100 C30,40 60,20 100,20 C150,20 180,50 180,100 C180,150 150,180 100,180 C50,180 20,150 20,100 C20,60 40,30 90,30 C140,30 170,60 170,110" />
+                    <path class="scribble-path" d="M35,105 C35,45 65,25 105,25 C155,25 185,55 185,105 C185,155 155,185 105,185 C55,185 25,155 25,105" opacity="0.6" style="animation-delay: 0.2s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Hard LeetCode</h2>
+                    <p>Solving Tough Ones.</p>
+                    <span class="scribble-date">Tue, 5:30 PM</span>
+                </div>
+            </article>
+            <!-- Event 2 -->
+            <article class="scribble-wrapper" onclick="openModal('Interview Prep', 'Mock technical interviews and resume reviews. Get ready for your dream job with peer feedback and expert advice.', 'Thu, 15th Feb', '6:00 PM - 8:00 PM', 'Classroom 101')">
+                <svg class="scribble-svg" viewBox="0 0 200 200">
+                    <path class="scribble-path" d="M20,90 C20,30 50,10 100,15 C160,20 190,60 185,110 C180,160 140,190 90,185 C40,180 15,140 20,90 C25,50 60,20 110,25" />
+                    <path class="scribble-path" d="M25,95 C25,35 55,15 105,20 C165,25 195,65 190,115 C185,165 145,195 95,190 C45,185 20,145 25,95" opacity="0.6" style="animation-delay: 0.3s" />
+                </svg>
+                <div class="scribble-content">
+                    <h2>Interview Prep</h2>
+                    <p>Mock Interviews.</p>
+                    <span class="scribble-date">Thu, 6 PM</span>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- Generic Scribble Modal -->
+    <div id="eventModal" class="scribble-modal-overlay">
+        <div class="scribble-modal-content">
+            <button class="modal-close-btn" onclick="closeModal()">×</button>
+            <h2 id="modalTitle" class="modal-title">Event Title</h2>
+            <div class="modal-details">
+                <p id="modalDesc" class="modal-description">
+                    Description goes here...
+                </p>
+                <div class="modal-meta">
+                    <p>📅 <strong>Date:</strong> <span id="modalDate">Date</span></p>
+                    <p>⏰ <strong>Time:</strong> <span id="modalTime">Time</span></p>
+                    <p>📍 <strong>Venue:</strong> <span id="modalVenue">Venue</span></p>
+                </div>
+            </div>
+            <a href="#" class="modal-cta" onclick="alert('Registered!'); closeModal();">Register Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Modal Logic
+        function openModal(title, desc, date, time, venue) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalDate').innerText = date;
+            document.getElementById('modalTime').innerText = time;
+            document.getElementById('modalVenue').innerText = venue;
+
+            const modal = document.getElementById('eventModal');
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('eventModal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+
+        document.getElementById('eventModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Tab Logic
+        const tabs = document.querySelectorAll('.club-tab');
+        const sections = document.querySelectorAll('.club-section');
+
+        function activateTab(targetId) {
+            // Update tabs
+            tabs.forEach(tab => {
+                if(tab.getAttribute('data-target') === targetId) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Update sections
+            sections.forEach(section => {
+                if(section.id === targetId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+
+            // Update URL parameter without reloading
+            const url = new URL(window.location);
+            url.searchParams.set('club', targetId);
+            window.history.pushState({}, '', url);
+        }
+
+        // Add click listeners
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                activateTab(tab.getAttribute('data-target'));
+            });
+        });
+
+        // Check URL on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const targetClub = params.get('club');
+            
+            if (targetClub && document.getElementById(targetClub)) {
+                activateTab(targetClub);
+            } else {
+                // Default to first club if none specified
+                activateTab('coding_ninjas');
+            }
+        });
+    </script>
+</body>
+
+</html>
