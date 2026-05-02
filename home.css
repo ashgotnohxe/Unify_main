@@ -161,81 +161,64 @@ body {
     stroke: #9b59b6;
 }
 
-/* Subtle animation */
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(var(--r, 0deg));
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(var(--r, 0deg));
-    }
-}
-
 .doodle {
-    animation: float 2s ease-in-out infinite;
+    position: absolute;
+    stroke: var(--ink-color);
+    stroke-width: 3;
+    /* Thicker stroke */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    opacity: 0.7;
+    /* Slightly more visible */
 }
 
 .doodle-planet {
     --r: -10deg;
-    animation-delay: 0s;
 }
 
 .doodle-sparkles {
     --r: 15deg;
-    animation-delay: 0.5s;
 }
 
 .doodle-heart-swirl {
     --r: -15deg;
-    animation-delay: 1s;
 }
 
 .doodle-cat {
     --r: 5deg;
-    animation-delay: 1.5s;
 }
 
 .doodle-flower-simple {
     --r: 20deg;
-    animation-delay: 0.2s;
 }
 
 .doodle-arrow {
     --r: 140deg;
-    animation-delay: 0.8s;
 }
 
 .doodle-shooting-star {
     --r: -15deg;
-    animation-delay: 1.2s;
 }
 
 .doodle-bow {
     --r: 10deg;
-    animation-delay: 0.3s;
 }
 
 .doodle-bulb {
     --r: -10deg;
-    animation-delay: 1.8s;
 }
 
 .doodle-plane {
     --r: 20deg;
-    animation-delay: 0.7s;
 }
 
 .doodle-music {
     --r: 15deg;
-    animation-delay: 1.5s;
 }
 
 .doodle-cloud-cute {
     --r: 0deg;
-    animation-duration: 5s;
 }
 
 .container {
@@ -358,14 +341,12 @@ input {
     border-bottom: 2px solid var(--ink-color);
     padding: 5px 0;
     outline: none;
-    transition: all 0.3s;
     width: 100%;
     color: #444;
 }
 
 input:focus {
     border-bottom-width: 3px;
-    transform: scale(1.02);
 }
 
 .submit-btn {
@@ -379,17 +360,7 @@ input:focus {
     border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
     /* Sketchy border */
     align-self: center;
-    transition: transform 0.1s;
     background: rgba(255, 255, 255, 0.4);
-}
-
-.submit-btn:hover {
-    transform: scale(1.05) rotate(-1deg);
-    background-color: rgba(255, 183, 213, 0.3);
-}
-
-.submit-btn:active {
-    transform: scale(0.95);
 }
 
 /* Rough sketching effect outline for the whole card overlay */

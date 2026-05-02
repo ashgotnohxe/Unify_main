@@ -1,4 +1,7 @@
 /* Color Variables */
+*:focus {
+    outline: none !important;
+}
 :root {
     --soft-cloud: #F6F7F9;
     --mist-white: #FFFFFF;
@@ -59,7 +62,6 @@ body {
 .doodle {
     position: absolute;
     opacity: 0.85;
-    animation: float 6s ease-in-out infinite;
 }
 
 .star-1 {
@@ -68,7 +70,6 @@ body {
     width: 50px;
     height: 50px;
     transform: rotate(-15deg);
-    animation-duration: 7s;
 }
 
 .flower-1 {
@@ -77,7 +78,6 @@ body {
     width: 60px;
     height: 60px;
     opacity: 0.8;
-    animation-duration: 8s;
 }
 
 .squiggle-1 {
@@ -86,7 +86,6 @@ body {
     width: 100px;
     height: 25px;
     transform: rotate(10deg);
-    animation-duration: 6s;
 }
 
 .cloud-1 {
@@ -95,7 +94,6 @@ body {
     width: 120px;
     height: 80px;
     opacity: 0.6;
-    animation-duration: 12s;
 }
 
 .sun-1 {
@@ -104,7 +102,6 @@ body {
     width: 70px;
     height: 70px;
     opacity: 0.7;
-    animation: rotateSun 25s linear infinite;
 }
 
 .heart-1 {
@@ -113,7 +110,6 @@ body {
     width: 40px;
     height: 40px;
     transform: rotate(20deg);
-    animation-duration: 9s;
 }
 
 /* New Doodles Positions & Specific Animations */
@@ -123,25 +119,21 @@ body {
     width: 60px;
     height: 60px;
     transform: rotate(15deg);
-    animation: pulse 4s infinite ease-in-out;
 }
 
 .dot-1 {
     top: 25%;
     left: 18%;
-    animation: pulse 3s infinite ease-in-out;
 }
 
 .dot-2 {
     top: 65%;
     left: 12%;
-    animation: pulse 4s infinite ease-in-out 1s;
 }
 
 .dot-3 {
     bottom: 25%;
     right: 3%;
-    animation: pulse 3.5s infinite ease-in-out 0.5s;
 }
 
 .sparkle-1 {
@@ -149,7 +141,6 @@ body {
     left: 30%;
     width: 30px;
     height: 30px;
-    animation: spin-slow 12s linear infinite;
 }
 
 .sparkle-2 {
@@ -157,7 +148,6 @@ body {
     left: 55%;
     width: 25px;
     height: 25px;
-    animation: spin-slow 10s linear infinite reverse;
 }
 
 .spiral-1 {
@@ -165,7 +155,6 @@ body {
     left: 8%;
     width: 50px;
     height: 50px;
-    animation: spin-slow 15s linear infinite;
 }
 
 .music-1 {
@@ -174,7 +163,6 @@ body {
     width: 40px;
     height: 40px;
     transform: rotate(-10deg);
-    animation: float 5.5s ease-in-out infinite;
 }
 
 /* Float override */
@@ -185,7 +173,6 @@ body {
     width: 60px;
     height: 60px;
     opacity: 0.8;
-    animation: float 14s ease-in-out infinite;
 }
 
 .plane-1 {
@@ -193,7 +180,6 @@ body {
     right: 35%;
     width: 50px;
     height: 50px;
-    animation: fly 25s linear infinite;
 }
 
 .swirl-1 {
@@ -201,7 +187,6 @@ body {
     left: 3%;
     width: 45px;
     height: 45px;
-    animation: spin-slow 18s linear infinite;
 }
 
 .bulb-1 {
@@ -209,7 +194,6 @@ body {
     left: 8%;
     width: 45px;
     height: 45px;
-    animation: pulse 6s ease-in-out infinite;
 }
 
 .coffee-1 {
@@ -217,7 +201,6 @@ body {
     left: 5%;
     width: 40px;
     height: 40px;
-    animation: float 11s ease-in-out infinite;
     opacity: 0.8;
 }
 
@@ -226,7 +209,6 @@ body {
     right: 15%;
     width: 45px;
     height: 45px;
-    animation: float 13s ease-in-out infinite;
     opacity: 0.8;
 }
 
@@ -236,7 +218,6 @@ body {
     width: 40px;
     height: 40px;
     transform: rotate(45deg);
-    animation: float 9s ease-in-out infinite;
     opacity: 0.8;
 }
 
@@ -246,7 +227,6 @@ body {
     width: 35px;
     height: 35px;
     transform: rotate(-30deg);
-    animation: float 10s ease-in-out infinite;
     opacity: 0.8;
 }
 
@@ -255,7 +235,6 @@ body {
     left: 15%;
     width: 25px;
     height: 25px;
-    animation: pulse 4s infinite;
     opacity: 0.7;
 }
 
@@ -265,31 +244,26 @@ body {
     width: 100px;
     height: 40px;
     transform: rotate(-15deg);
-    animation: float 9s ease-in-out infinite;
 }
 
 .dot-4 {
     top: 35%;
     right: 35%;
-    animation: pulse 2.5s infinite;
 }
 
 .dot-5 {
     bottom: 35%;
     left: 25%;
-    animation: pulse 3.5s infinite;
 }
 
 .dot-6 {
     top: 80%;
     right: 8%;
-    animation: pulse 4.5s infinite;
 }
 
 .dot-7 {
     bottom: 4%;
     left: 45%;
-    animation: pulse 3s infinite;
 }
 
 .rainbow-1 {
@@ -297,7 +271,6 @@ body {
     right: 2%;
     width: 60px;
     height: 30px;
-    animation: float 10s ease-in-out infinite;
 }
 
 .balloon-1 {
@@ -305,7 +278,6 @@ body {
     left: 80%;
     width: 40px;
     height: 60px;
-    animation: float 12s ease-in-out infinite;
 }
 
 .butterfly-1 {
@@ -313,7 +285,6 @@ body {
     left: 5%;
     width: 35px;
     height: 35px;
-    animation: flutter 4s ease-in-out infinite;
 }
 
 .moon-1 {
@@ -321,7 +292,6 @@ body {
     left: 35%;
     width: 30px;
     height: 30px;
-    animation: spin-slow 100s linear infinite;
 }
 
 .smiley-1 {
@@ -329,7 +299,6 @@ body {
     right: 15%;
     width: 30px;
     height: 30px;
-    animation: pulse 5s ease-in-out infinite;
 }
 
 .heart-2 {
@@ -337,7 +306,6 @@ body {
     left: 25%;
     width: 25px;
     height: 25px;
-    animation: pulse 3s ease-in-out infinite;
 }
 
 .star-little {
@@ -345,75 +313,6 @@ body {
     left: 45%;
     width: 20px;
     height: 20px;
-    animation: spin-slow 5s linear infinite;
-}
-
-@keyframes flutter {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg) scaleX(1);
-    }
-
-    25% {
-        transform: translateY(-5px) rotate(10deg) scaleX(0.8);
-    }
-
-    50% {
-        transform: translateY(-2px) rotate(-10deg) scaleX(1);
-    }
-
-    75% {
-        transform: translateY(-7px) rotate(5deg) scaleX(0.8);
-    }
-}
-
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUpStagger {
-    from {
-        opacity: 0;
-        transform: translateY(var(--scatter-y, 30px)) scale(0.9) rotate(var(--base-rotation, 0deg));
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(var(--scatter-y, 0px)) scale(1) rotate(var(--base-rotation, 0deg));
-    }
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(var(--r, 0deg));
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(var(--r, 0deg));
-    }
-}
-
-@keyframes rotateSun {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
 }
 
 /* Header */
@@ -421,8 +320,6 @@ body {
     text-align: center;
     margin-bottom: 2rem;
     z-index: 10;
-    /* Slight fade-in animation for header */
-    animation: fadeInDown 0.8s ease-out;
 }
 
 .logo {
@@ -494,23 +391,19 @@ body {
     box-shadow: var(--shadow-soft);
     border: 3px solid var(--pastel-lavender);
     /* Updated to purple border */
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    /* Springy but professional */
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     /* meaningful start state for animation */
-    animation: fadeInUpStagger 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 /* Inner Photo Area - Slightly Rotated */
 .card .photo-area,
 .card h2,
 .card p {
-    transition: transform 0.3s ease;
 }
 
 
@@ -543,17 +436,7 @@ body {
 
 /* Refined Hover Transition - Base - Snappier & More Satisfying */
 .card {
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    /* Smoother pop ease */
 }
-
-.card:hover {
-    z-index: 20;
-    box-shadow: 0 45px 90px -20px rgba(0, 0, 0, 0.35);
-    /* Deeper, more atmospheric shadow */
-    border-color: var(--powder-blue);
-}
-
 
 /* Specific Asymmetry Per Card - SCATTERED & ROTATED */
 .card-events {
@@ -561,12 +444,6 @@ body {
     --base-rotation: -4deg;
     --scatter-y: 10px;
     border-radius: 20px 25px 22px 18px;
-    animation-delay: 0.1s;
-}
-
-.card-events:hover {
-    transform: translateY(-40px) scale(1.15) rotate(-14deg) !important;
-    /* Increased lift & scale */
 }
 
 .card-events .photo-area {
@@ -579,12 +456,6 @@ body {
     --base-rotation: 3deg;
     --scatter-y: -15px;
     border-radius: 24px 18px 25px 20px;
-    animation-delay: 0.2s;
-}
-
-.card-myspace:hover {
-    transform: translateY(-35px) scale(1.15) rotate(12deg) !important;
-    /* Increased lift & scale */
 }
 
 .card-myspace .photo-area {
@@ -597,12 +468,6 @@ body {
     --base-rotation: -5deg;
     --scatter-y: 5px;
     border-radius: 22px 20px 18px 25px;
-    animation-delay: 0.3s;
-}
-
-.card-feedback:hover {
-    transform: translateY(-45px) scale(1.18) rotate(-10deg) !important;
-    /* Most dramatic pop */
 }
 
 .card-feedback .photo-area {
@@ -617,32 +482,10 @@ body {
     /* opacity: 0.7; Removed to prevent flash before animation */
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 25px 22px 20px 18px;
-    animation: fadeInUpStagger 0.8s ease-out both;
-    animation-delay: 0.4s;
-}
-
-.card-soon:hover {
-    transform: translateY(-30px) scale(1.1) rotate(8deg) !important;
 }
 
 .card-soon .photo-area {
     transform: rotate(1.5deg);
-}
-
-
-/* Interactivity on Hover */
-.card:hover .pin {
-    animation: wiggle 0.4s ease-in-out;
-    background-color: var(--blush-peach);
-    /* Popping color link */
-}
-
-.card:hover h2 {
-    color: var(--charcoal-gray);
-    /* Keep dark for readability but maybe add a text shadow? */
-    text-shadow: 2px 2px 0px var(--powder-blue);
-    /* Playful shadow offset */
-    transition: text-shadow 0.3s ease;
 }
 
 
@@ -677,12 +520,7 @@ body {
 .footer-nav a {
     text-decoration: none;
     color: var(--ash-gray);
-    transition: color 0.3s;
     position: relative;
-}
-
-.footer-nav a:hover {
-    color: var(--charcoal-gray);
 }
 
 .footer-nav a::after {
@@ -694,25 +532,6 @@ body {
     bottom: -4px;
     left: 0;
     background-color: var(--powder-blue);
-    transition: width 0.3s;
-}
-
-.footer-nav a:hover::after {
-    width: 100%;
-}
-
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Responsive adjustments */

@@ -1,4 +1,8 @@
 /* Color Variables (Matching Homepage) */
+*:focus {
+    outline: none !important;
+}
+
 :root {
     --soft-cloud: #F6F7F9;
     --mist-white: #FFFFFF;
@@ -70,19 +74,12 @@ button,
     border-radius: 50px;
     /* Pill shape */
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.filter-tab:hover {
-    transform: translateY(-3px);
-    box-shadow: 4px 4px 0px var(--pastel-lavender);
 }
 
 .filter-tab.active {
     background-color: var(--powder-blue);
     border-color: var(--charcoal-gray);
     box-shadow: 3px 3px 0px var(--charcoal-gray);
-    transform: translateY(-2px);
 }
 
 /* Events Grid */
@@ -110,10 +107,8 @@ button,
     text-align: center;
     overflow: hidden;
 
-    /* Smooth transition for hover AND filtering - Making it HELLA SMOOTH */
-    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Removed CSS transition; will be handled by GSAP */
     opacity: 1;
-    transform: scale(1) translateY(0);
 }
 
 .event-count-bubble {
@@ -134,33 +129,10 @@ button,
     border: 2px solid var(--charcoal-gray);
     box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
     z-index: 5;
-    animation: pulse 3s infinite;
 }
 
 .event-card.hidden {
     display: none;
-}
-
-.event-card.animating-out {
-    opacity: 0;
-    transform: scale(0.8) translateY(20px);
-    pointer-events: none;
-}
-
-.event-card.animating-in {
-    opacity: 0;
-    transform: scale(0.9) translateY(20px);
-}
-
-.event-card:hover {
-    transform: translateY(-15px) scale(1.03) rotate(1deg);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--pastel-lavender);
-    z-index: 10;
-}
-
-.event-card:nth-child(even):hover {
-    transform: translateY(-15px) scale(1.03) rotate(-1deg);
 }
 
 /* Card Content */
@@ -231,10 +203,6 @@ button,
     z-index: 2;
 }
 
-.event-card:hover .pin {
-    background-color: var(--blush-peach);
-}
-
 /* Background Doodles */
 .background-doodles {
     position: fixed;
@@ -248,7 +216,6 @@ button,
 
 .doodle {
     position: absolute;
-    animation: float 6s ease-in-out infinite;
     opacity: 0.6;
 }
 
@@ -314,7 +281,6 @@ button,
     right: 12%;
     width: 30px;
     height: 30px;
-    animation: pulse 4s infinite;
 }
 
 .confetti-1 {
@@ -322,7 +288,6 @@ button,
     left: 5%;
     width: 40px;
     height: 40px;
-    animation: spin-slow 10s linear infinite;
 }
 
 .calendar-1 {
@@ -331,7 +296,6 @@ button,
     width: 50px;
     height: 50px;
     transform: rotate(-5deg);
-    animation: float 9s ease-in-out infinite;
 }
 
 .bulb-event {
@@ -339,7 +303,6 @@ button,
     right: 25%;
     width: 45px;
     height: 45px;
-    animation: pulse 5s ease-in-out infinite;
 }
 
 .mic-1 {
@@ -348,7 +311,6 @@ button,
     width: 40px;
     height: 40px;
     transform: rotate(-10deg);
-    animation: float 6s ease-in-out infinite;
 }
 
 .trophy-1 {
@@ -357,7 +319,6 @@ button,
     width: 45px;
     height: 45px;
     transform: rotate(5deg);
-    animation: float 7s ease-in-out infinite;
 }
 
 .palette-1 {
@@ -365,7 +326,6 @@ button,
     left: 8%;
     width: 50px;
     height: 50px;
-    animation: float 8s ease-in-out infinite;
 }
 
 .gamepad-1 {
@@ -374,7 +334,6 @@ button,
     width: 50px;
     height: 35px;
     transform: rotate(-15deg);
-    animation: float 7.5s ease-in-out infinite;
 }
 
 .pizza-1 {
@@ -383,7 +342,6 @@ button,
     width: 45px;
     height: 45px;
     transform: rotate(20deg);
-    animation: spin-slow 15s linear infinite;
 }
 
 .star-3 {
@@ -391,7 +349,6 @@ button,
     left: 35%;
     width: 30px;
     height: 30px;
-    animation: pulse 4s infinite;
 }
 
 .star-4 {
@@ -399,7 +356,6 @@ button,
     left: 40%;
     width: 25px;
     height: 25px;
-    animation: spin-slow 8s linear infinite;
 }
 
 .squiggle-2 {
@@ -408,41 +364,4 @@ button,
     width: 80px;
     height: 30px;
     transform: rotate(-5deg);
-    animation: float 9s ease-in-out infinite;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0) rotate(var(--r, 0deg));
-    }
-
-    50% {
-        transform: translateY(-10px) rotate(var(--r, 0deg));
-    }
-}
-
-@keyframes spin-slow {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
 }
