@@ -1,0 +1,424 @@
+:root {
+    --bg-pink: #ff9ec7;
+    /* More vibrant pink */
+    --paper-white: #fffdf0;
+    --ink-color: #2c3e50;
+    --line-color: #bdc3c7;
+    --scribble-color: #5d3b6d;
+    /* Darker purple for scribble */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: var(--bg-pink);
+    color: var(--ink-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    /* For doodles */
+}
+
+/* Doodles */
+.doodles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.doodle {
+    position: absolute;
+    stroke: var(--ink-color);
+    stroke-width: 3;
+    /* Thicker stroke */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    opacity: 0.7;
+    /* Slightly more visible */
+}
+
+/* Random positioning and rotation for new doodles - Pushed slightly outwards */
+.doodle-planet {
+    top: 2%;
+    left: 2%;
+    width: 140px;
+    /* Bigger */
+    transform: rotate(-10deg);
+    stroke: #8e44ad;
+}
+
+.doodle-sparkles {
+    top: 5%;
+    right: 5%;
+    width: 100px;
+    /* Bigger */
+    transform: rotate(15deg);
+}
+
+.doodle-heart-swirl {
+    bottom: 5%;
+    left: 10%;
+    width: 90px;
+    /* Bigger */
+    transform: rotate(-15deg);
+    stroke: #e91e63;
+}
+
+.doodle-cloud-cute {
+    top: 15%;
+    left: 45%;
+    /* Moved to top centerish */
+    width: 130px;
+    /* Bigger */
+    opacity: 0.4;
+    z-index: -2;
+}
+
+.doodle-cat {
+    bottom: 2%;
+    right: 2%;
+    width: 120px;
+    /* Bigger */
+    transform: rotate(5deg);
+    stroke: #d35400;
+}
+
+.doodle-flower-simple {
+    top: 40%;
+    left: 2%;
+    width: 80px;
+    /* Bigger */
+    transform: rotate(20deg);
+    stroke: #e91e63;
+}
+
+.doodle-arrow {
+    bottom: 15%;
+    left: 35%;
+    width: 70px;
+    /* Bigger */
+    transform: rotate(140deg);
+}
+
+/* New Doodles Positioning */
+.doodle-shooting-star {
+    top: 2%;
+    left: 25%;
+    width: 120px;
+    /* Bigger */
+    transform: rotate(-15deg);
+    stroke: #f1c40f;
+}
+
+.doodle-bow {
+    top: 50%;
+    right: 2%;
+    width: 90px;
+    /* Bigger */
+    transform: rotate(10deg);
+    stroke: #e91e63;
+}
+
+.doodle-bulb {
+    bottom: 30%;
+    left: 5%;
+    width: 70px;
+    /* Bigger */
+    transform: rotate(-10deg);
+    stroke: #f39c12;
+    opacity: 0.8;
+}
+
+.doodle-plane {
+    top: 20%;
+    left: 15%;
+    width: 90px;
+    /* Bigger */
+    transform: rotate(20deg);
+    stroke: #3498db;
+}
+
+.doodle-music {
+    bottom: 10%;
+    right: 20%;
+    width: 60px;
+    /* Bigger */
+    transform: rotate(15deg);
+    stroke: #9b59b6;
+}
+
+/* Subtle animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(var(--r, 0deg));
+    }
+}
+
+.doodle {
+    animation: float 2s ease-in-out infinite;
+}
+
+.doodle-planet {
+    --r: -10deg;
+    animation-delay: 0s;
+}
+
+.doodle-sparkles {
+    --r: 15deg;
+    animation-delay: 0.5s;
+}
+
+.doodle-heart-swirl {
+    --r: -15deg;
+    animation-delay: 1s;
+}
+
+.doodle-cat {
+    --r: 5deg;
+    animation-delay: 1.5s;
+}
+
+.doodle-flower-simple {
+    --r: 20deg;
+    animation-delay: 0.2s;
+}
+
+.doodle-arrow {
+    --r: 140deg;
+    animation-delay: 0.8s;
+}
+
+.doodle-shooting-star {
+    --r: -15deg;
+    animation-delay: 1.2s;
+}
+
+.doodle-bow {
+    --r: 10deg;
+    animation-delay: 0.3s;
+}
+
+.doodle-bulb {
+    --r: -10deg;
+    animation-delay: 1.8s;
+}
+
+.doodle-plane {
+    --r: 20deg;
+    animation-delay: 0.7s;
+}
+
+.doodle-music {
+    --r: 15deg;
+    animation-delay: 1.5s;
+}
+
+.doodle-cloud-cute {
+    --r: 0deg;
+    animation-duration: 5s;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1000px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.left-side {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.handwritten-title {
+    font-family: 'Indie Flower', cursive;
+    font-size: 5rem;
+    line-height: .9;
+    transform: rotate(-5deg);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.handwritten-title span {
+    display: block;
+    margin-left: 50px;
+}
+
+/* Thick wavy scribble */
+.scribble {
+    width: 180px;
+    height: 30px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-40%) rotate(-5deg);
+    background: radial-gradient(circle at 10px 10px, var(--scribble-color) 40%, transparent 45%);
+    background-size: 20px 20px;
+    background-position: 0 5px;
+    filter: blur(0.5px);
+    opacity: 0.8;
+}
+
+.scribble::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10px 10px, var(--scribble-color) 40%, transparent 45%);
+    background-size: 20px 20px;
+}
+
+.right-side {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.paper-card {
+    background-color: var(--paper-white);
+    padding: 40px 30px 40px 50px;
+    /* Left padding for holes */
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+    transform: rotate(2deg);
+    /* Wavy top effect */
+    border-top: none;
+    clip-path: polygon(0% 10px, 5% 0px, 10% 10px, 15% 0px, 20% 10px, 25% 0px, 30% 10px, 35% 0px, 40% 10px, 45% 0px, 50% 10px, 55% 0px, 60% 10px, 65% 0px, 70% 10px, 75% 0px, 80% 10px, 85% 0px, 90% 10px, 95% 0px, 100% 10px, 100% 100%, 0% 100%);
+}
+
+/* Notebook holes */
+.holes {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 30px;
+    background-image: radial-gradient(circle, #ddd 30%, transparent 35%);
+    background-size: 100% 40px;
+    background-position: center 20px;
+    border-right: 2px solid rgba(255, 100, 100, 0.3);
+    /* Margin line */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+label {
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+    color: var(--ink-color);
+}
+
+input {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.4rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--ink-color);
+    padding: 5px 0;
+    outline: none;
+    transition: all 0.3s;
+    width: 100%;
+    color: #444;
+}
+
+input:focus {
+    border-bottom-width: 3px;
+    transform: scale(1.02);
+}
+
+.submit-btn {
+    margin-top: 10px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.8rem;
+    background: transparent;
+    border: 3px solid var(--ink-color);
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    /* Sketchy border */
+    align-self: center;
+    transition: transform 0.1s;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.submit-btn:hover {
+    transform: scale(1.05) rotate(-1deg);
+    background-color: rgba(255, 183, 213, 0.3);
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+
+/* Rough sketching effect outline for the whole card overlay */
+.paper-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--ink-color);
+    border-radius: 2px;
+    pointer-events: none;
+    clip-path: inherit;
+    /* Match the wavy top */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .handwritten-title {
+        font-size: 3.5rem;
+    }
+
+    .scribble {
+        width: 140px;
+        left: 55%;
+    }
+}

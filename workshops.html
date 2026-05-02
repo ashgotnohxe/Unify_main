@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - UNIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eventspage.css">
+    <link rel="stylesheet" href="workshops.css">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--pastel-lavender);
+        }
+
+        .detail-card {
+            background-color: var(--mist-white);
+            border: 3px solid var(--charcoal-gray);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+            margin-bottom: 40px;
+        }
+
+        .detail-illustration {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--soft-mint);
+            border: 2px solid var(--charcoal-gray);
+            border-radius: 50px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--pastel-lavender);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Doodles -->
+    <div class="background-doodles">
+        <svg class="doodle palette-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10c0.5 0 1-0.5 1-1v-2c0-1.5 1.5-2 2-2 1.5 0 2-1.5 2-2v-1c0-1.5 1.5-2 2-2h1c1.5 0 2-1.5 2-2 0-3.5-3.5-8-10-8z" fill="#9CDBC9" opacity="0.7" />
+            <circle cx="7.5" cy="7.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="11.5" cy="11.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+            <circle cx="6.5" cy="12.5" r="1.5" fill="#FFFFFF" opacity="0.6" />
+        </svg>
+        <svg class="doodle camera-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="20" height="14" rx="2" stroke="#2E2E2E" stroke-width="2" />
+            <circle cx="12" cy="13" r="4" stroke="#2E2E2E" stroke-width="2" />
+            <path d="M16 2h4v4h-4z" fill="#F3D6C6" opacity="0.8" />
+        </svg>
+        <svg class="doodle squiggle-1" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 10C15 0 25 20 35 10C45 0 55 20 65 10C75 0 85 20 95 10" stroke="#A5D0EB" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+        </svg>
+        <svg class="doodle star-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l3 7h7l-5 5 2 7-7-5-7 5 2-7-5-5h7z" fill="#9B96C7" opacity="0.6" />
+        </svg>
+        <svg class="doodle mic-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" fill="#A5D0EB" opacity="0.8" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+            <line x1="12" y1="19" x2="12" y2="23" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+            <line x1="8" y1="23" x2="16" y2="23" stroke="#A5D0EB" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav style="width: 100%; max-width: 800px; padding: 20px 0;">
+        <a href="eventspage.html" class="back-link" style="position: absolute; top: 20px; left: 20px; z-index: 100;">← Back to Events</a>
+    </nav>
+
+    <!-- Main Workshops Grid -->
+    <main id="mainGrid" class="events-grid" style="margin: 5rem auto 0; max-width: 1000px; padding: 0 20px;">
+        <article class="event-card" onclick="showSection('graphic_design')">
+            <div class="card-illustration workshop-illustration">
+                <svg viewBox="0 0 100 100" class="illustration-svg">
+                    <circle cx="50" cy="50" r="25" stroke="#9B96C7" stroke-width="3" />
+                    <path d="M50 50L70 30" stroke="#2E2E2E" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="card-content">
+                <h2>Graphic Design</h2>
+                <p class="description">Intro to vector art and typography.</p>
+            </div>
+            <div class="pin"></div>
+        </article>
+        <article class="event-card" onclick="showSection('photography')">
+            <div class="card-illustration workshop-illustration">
+                <svg viewBox="0 0 100 100" class="illustration-svg">
+                    <rect x="30" y="30" width="40" height="30" fill="#9CDBC9" opacity="0.6" />
+                    <path d="M35 35L65 55" stroke="#2E2E2E" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="card-content">
+                <h2>Photography 101</h2>
+                <p class="description">Composition and lighting basics.</p>
+            </div>
+            <div class="pin"></div>
+        </article>
+        <article class="event-card" onclick="showSection('pottery')">
+            <div class="card-illustration workshop-illustration">
+                <svg viewBox="0 0 100 100" class="illustration-svg">
+                    <path d="M30 60Q50 80 70 60V80H30Z" fill="#EDBAA1" opacity="0.7" />
+                    <rect x="45" y="40" width="10" height="20" fill="#2E2E2E" />
+                </svg>
+            </div>
+            <div class="card-content">
+                <h2>Pottery Workshop</h2>
+                <p class="description">Hands-on clay sculpting session.</p>
+            </div>
+            <div class="pin"></div>
+        </article>
+        <article class="event-card" onclick="showSection('public_speaking')">
+            <div class="card-illustration workshop-illustration">
+                <svg viewBox="0 0 100 100" class="illustration-svg">
+                    <path d="M40 30H60V70H40Z" stroke="#2E2E2E" stroke-width="2" />
+                    <circle cx="50" cy="20" r="10" fill="#A5D0EB" opacity="0.6" />
+                </svg>
+            </div>
+            <div class="card-content">
+                <h2>Public Speaking</h2>
+                <p class="description">Mastering the art of stage presence.</p>
+            </div>
+            <div class="pin"></div>
+        </article>
+    </main>
+
+    <div id="sectionDetails" style="display: none; padding-top: 2rem;">
+
+    <div class="detail-container">
+        
+        <!-- ==================== GRAPHIC DESIGN ==================== -->
+        <div id="graphic_design" class="workshop-section">
+            <div class="detail-card">
+                <svg viewBox="0 0 100 100" class="detail-illustration">
+                    <circle cx="50" cy="50" r="25" stroke="#9B96C7" stroke-width="4" />
+                    <path d="M50 50L75 25" stroke="#2E2E2E" stroke-width="3" />
+                    <rect x="20" y="60" width="20" height="20" fill="#A5D0EB" opacity="0.6" />
+                </svg>
+                <span class="category-tag">Workshops</span>
+                <h1 style="font-size: 3rem; margin: 20px 0;">Graphic Design</h1>
+                <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                    <span class="time" style="font-size: 1.2rem;">🕒 2:00 PM Sunday</span>
+                    <span class="venue" style="font-size: 1.2rem;">📍 Computer Lab</span>
+                </div>
+                <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    Learn the principles of design, color theory, and typography. Use Adobe Illustrator and Figma to create
+                    stunning visuals. Perfect for aspiring UI/UX designers and digital artists.
+                    <br><br>
+                    <strong>Software:</strong> Figma (Free) & Illustrator (Provided).
+                </p>
+                <a href="#" class="register-btn" onclick="alert('Registered Successfully!');">Start Designing</a>
+            </div>
+        </div>
+
+        <!-- ==================== PHOTOGRAPHY 101 ==================== -->
+        <div id="photography" class="workshop-section">
+            <div class="detail-card">
+                <svg viewBox="0 0 100 100" class="detail-illustration">
+                    <rect x="25" y="30" width="50" height="40" fill="#9CDBC9" opacity="0.6" />
+                    <circle cx="50" cy="50" r="12" stroke="#2E2E2E" stroke-width="3" />
+                    <rect x="60" y="25" width="10" height="5" fill="#2E2E2E" />
+                </svg>
+                <span class="category-tag">Workshops</span>
+                <h1 style="font-size: 3rem; margin: 20px 0;">Photography 101</h1>
+                <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                    <span class="time" style="font-size: 1.2rem;">🕒 10:00 AM Sunday</span>
+                    <span class="venue" style="font-size: 1.2rem;">📍 Studio</span>
+                </div>
+                <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    Unlock the full potential of your camera! We'll cover the exposure triangle (ISO, Aperture, Shutter
+                    Speed), composition rules, and basic editing. Bring your DSLR or just your phone!
+                    <br><br>
+                    <strong>Assignment:</strong> Capture the "Campus Golden Hour".
+                </p>
+                <a href="#" class="register-btn" onclick="alert('Registered Successfully!');">Sign Up</a>
+            </div>
+        </div>
+
+        <!-- ==================== POTTERY WORKSHOP ==================== -->
+        <div id="pottery" class="workshop-section">
+            <div class="detail-card">
+                <svg viewBox="0 0 100 100" class="detail-illustration">
+                    <path d="M30 60Q50 85 70 60V80H30Z" fill="#EDBAA1" opacity="0.7" />
+                    <rect x="45" y="40" width="10" height="20" fill="#2E2E2E" />
+                    <path d="M30 60h40" stroke="#2E2E2E" stroke-width="2" />
+                </svg>
+                <span class="category-tag">Workshops</span>
+                <h1 style="font-size: 3rem; margin: 20px 0;">Pottery Workshop</h1>
+                <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                    <span class="time" style="font-size: 1.2rem;">🕒 11:00 AM Saturday</span>
+                    <span class="venue" style="font-size: 1.2rem;">📍 Art Room</span>
+                </div>
+                <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    Get your hands dirty and create something beautiful! This beginner-friendly workshop covers the basics
+                    of hand-building and wheel throwing. All materials provided.
+                    <br><br>
+                    <strong>Bonus:</strong> You get to take home your own fired clay mug! ☕️
+                </p>
+                <a href="#" class="register-btn" onclick="alert('Registered Successfully!');">Book Spot ($10)</a>
+            </div>
+        </div>
+
+        <!-- ==================== PUBLIC SPEAKING ==================== -->
+        <div id="public_speaking" class="workshop-section">
+            <div class="detail-card">
+                <svg viewBox="0 0 100 100" class="detail-illustration">
+                    <path d="M40 30H60V70H40Z" stroke="#2E2E2E" stroke-width="3" />
+                    <circle cx="50" cy="20" r="10" fill="#A5D0EB" opacity="0.6" />
+                    <path d="M30 80H70" stroke="#2E2E2E" stroke-width="3" />
+                </svg>
+                <span class="category-tag">Workshops</span>
+                <h1 style="font-size: 3rem; margin: 20px 0;">Public Speaking</h1>
+                <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                    <span class="time" style="font-size: 1.2rem;">🕒 3:30 PM Today</span>
+                    <span class="venue" style="font-size: 1.2rem;">📍 Seminar Hall</span>
+                </div>
+                <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    Conquer your fear of the stage! Learn how to articulate your thoughts, control your body language, and
+                    captivate an audience. Hosted by the renowned Toastmasters Club.
+                    <br><br>
+                    <strong>Session Focus:</strong> Impromptu speaking and elevator pitches.
+                </p>
+                <a href="#" class="register-btn" onclick="alert('Registered Successfully!');">Reserve a Seat</a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('mainGrid').style.display = 'none';
+            document.getElementById('sectionDetails').style.display = 'flex';
+            document.getElementById('sectionDetails').style.flexDirection = 'column';
+            document.getElementById('sectionDetails').style.alignItems = 'center';
+            
+            document.querySelectorAll('.workshop-section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'flex';
+            window.scrollTo(0,0);
+        }
+
+        function showGrid() {
+            document.getElementById('mainGrid').style.display = 'grid';
+            document.getElementById('sectionDetails').style.display = 'none';
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+
+</html>

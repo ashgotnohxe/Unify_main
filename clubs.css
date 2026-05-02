@@ -1,0 +1,62 @@
+/* Clubs specific styling */
+
+.club-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 0 20px;
+    z-index: 5;
+    position: relative;
+}
+
+.club-card {
+    background-color: #F9F6F0;
+    border: 3px solid var(--scribble-ink, #3E3B36);
+    border-radius: 20px;
+    padding: 30px 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0px var(--scribble-highlight, #A5D0EB);
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px var(--scribble-highlight, #A5D0EB);
+}
+
+.club-card h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.2rem;
+    color: var(--scribble-ink, #3E3B36);
+    margin-bottom: 10px;
+}
+
+.club-card p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    color: var(--scribble-ink, #3E3B36);
+}
+
+/* Adjust header spacing */
+.club-header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.club-header h2 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+}
