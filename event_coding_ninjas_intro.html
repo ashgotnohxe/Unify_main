@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Session - Coding Ninjas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scribble.css">
+    <style>
+        /* Specific styles for the single event view */
+        .event-detail-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid var(--scribble-ink);
+            border-radius: 20px;
+            /* Sketchy radius handled by scribble.css usually, but explicit here */
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            margin: 2rem auto;
+            position: relative;
+            box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+            transform: rotate(-1deg);
+        }
+
+        .register-button {
+            display: inline-block;
+            background: var(--scribble-highlight);
+            color: var(--scribble-ink);
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            padding: 10px 30px;
+            border: 3px solid var(--scribble-ink);
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .register-button:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+    </style>
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+
+    <!-- Background Doodles -->
+    <div class="background-doodles">
+        <svg class="doodle star-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.4 9.6H22.4L16 14.4L18.4 22L12 17.2L5.6 22L8 14.4L1.6 9.6H9.6L12 2Z" fill="#F3D6C6"
+                opacity="0.8" />
+        </svg>
+        <svg class="doodle cloud-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.132 20.177 10.244 17.819 10.034C17.6 7.227 15.266 5 12.5 5C10.158 5 8.113 6.591 7.422 8.791C4.945 9.074 3 11.233 3 14C3 16.761 5.239 19 8 19H17.5Z"
+                fill="#FFFFFF" fill-opacity="0.9" />
+        </svg>
+        <svg class="doodle laptop-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="4" width="18" height="12" rx="2" stroke="#3E3B36" stroke-width="2" />
+            <path d="M2 18h20" stroke="#3E3B36" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg class="doodle bulb-event" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M9 18H15M10 21H14M5.6 10C5.6 6.465 8.465 3.6 12 3.6C15.535 3.6 18.4 6.465 18.4 10C18.4 12.8 16.6 15.2 14 16H10C7.4 15.2 5.6 12.8 5.6 10Z"
+                stroke="#F3D6C6" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+        </svg>
+    </div>
+
+    <!-- Back Navigation -->
+    <nav>
+    <a href="clubs.html?club=coding_ninjas" class="back-arrow" style="position: absolute; top: 20px; left: 20px; font-family: 'Patrick Hand', cursive; font-size: 1.5rem; color: #2e2e2e; text-decoration: none; z-index: 100;">← Back to Updates</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center;">
+
+        <h1 class="scribble-title" style="font-size: 4rem; margin-bottom: 2rem;">
+            <span>I</span><span>N</span><span>T</span><span>R</span><span>O</span>
+        </h1>
+
+        <article class="event-detail-card">
+            <h2 style="font-size: 2.5rem; margin-top: 0;">Intro Session</h2>
+            <p style="font-size: 1.5rem; color: #555;">Kickstart your journey into Competitive Programming.</p>
+
+            <div style="margin: 2rem 0; font-size: 1.3rem; text-align: left;">
+                <p><strong>📅 Date:</strong> Monday, 12th Feb</p>
+                <p><strong>⏰ Time:</strong> 5:00 PM - 7:00 PM</p>
+                <p><strong>📍 Venue:</strong> Lab 1, CS Department</p>
+                <p><strong>📝 Agenda:</strong></p>
+                <ul style="list-style-type: circle; padding-left: 20px;">
+                    <li>Introduction to DSA</li>
+                    <li>Setting up your coding environment</li>
+                    <li>First "Hello World" to "Hard" problem</li>
+                    <li>Meet the mentors</li>
+                </ul>
+            </div>
+
+            <button class="register-button" data-event="Intro Session">Register
+                Now</button>
+        </article>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <script src="registration.js"></script>
+    <script src="cursor.js"></script>
+</body>
+
+</html>

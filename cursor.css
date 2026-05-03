@@ -1,0 +1,52 @@
+/* =========================================
+   CUSTOM CURSOR STYLES
+   ========================================= */
+
+/* Hide the default mouse cursor ONLY if the custom cursor JS successfully loads */
+body.custom-cursor-active * {
+    cursor: none !important;
+}
+
+/* --- Main Circular Cursor --- */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(155, 150, 199, 0.6); /* Pastel lavender */
+    border-radius: 50%;
+    
+    /* Prevent the cursor from blocking clicks on buttons beneath it */
+    pointer-events: none; 
+    z-index: 999999;
+    
+    /* Optimize animation performance */
+    will-change: transform;
+    
+    /* Center the circle on the mouse coordinates */
+    margin: -12px 0 0 -12px;
+    
+    /* Aesthetic pastel blend mode */
+    mix-blend-mode: multiply;
+    
+    /* Removed transition property as GSAP handles animation now */
+}
+
+/* --- Trailing Effect Circle --- */
+.custom-cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(165, 208, 235, 0.8); /* Powder blue pastel */
+    border-radius: 50%;
+    
+    pointer-events: none;
+    z-index: 999998; /* Just behind the main cursor */
+    will-change: transform;
+    margin: -6px 0 0 -6px;
+    
+    mix-blend-mode: multiply;
+}

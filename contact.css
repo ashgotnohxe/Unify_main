@@ -1,0 +1,235 @@
+/* 
+   Notebook Paper & Sticky Tape Theme (Lavender/Blue Palette)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive, sans-serif;
+    background-color: #F4F0FF; /* Lavender */
+    background-image: radial-gradient(#D9C8FF 2px, transparent 2px);
+    background-size: 30px 30px;
+    color: #1e1e1e;
+    height: 100vh; /* Lock to viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Stop all scrolling */
+}
+
+a, button, input, textarea {
+    cursor: pointer;
+}
+
+/* Back Link */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.5rem;
+    color: #2e2e2e;
+    text-decoration: none;
+    z-index: 100;
+    transition: transform 0.2s;
+}
+.back-link:hover {
+    transform: translateX(-5px);
+    color: #9575CD;
+}
+
+/* Page Title outside the paper */
+.page-header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: #1e1e1e;
+    text-shadow: 3px 3px 0px #B39DDB;
+    transform: rotate(-2deg);
+    letter-spacing: 2px;
+}
+
+/* Notebook Paper Form */
+.paper-container {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 40px; /* space for title */
+}
+
+/* The Tape */
+.tape {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    width: 140px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transform: translateX(-50%) rotate(-3deg);
+    z-index: 10;
+}
+
+.paper-sheet {
+    background-color: #fff;
+    width: 100%;
+    padding: 30px 30px 25px 50px;
+    border-radius: 2px;
+    box-shadow: 8px 8px 0px #B39DDB;
+    position: relative;
+    /* Red vertical margin line */
+    border-left: 2px solid #FFCDD2;
+    /* Blue horizontal lines */
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        #B3E5FC 31px,
+        #B3E5FC 32px
+    );
+    background-position: 0 18px; /* aligns text to lines */
+    transform: rotate(1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paper-sheet:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 12px 12px 0px #9575CD;
+}
+
+/* Punch holes */
+.paper-sheet::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: -15px;
+    width: 20px;
+    height: 20px;
+    background-color: #F4F0FF;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.paper-sheet::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    width: 20px;
+    height: 20px;
+    background-color: #F4F0FF;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.1);
+    transform: translateY(-50%);
+}
+
+.hole-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: -15px;
+    width: 20px;
+    height: 20px;
+    background-color: #F4F0FF;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+
+/* Form specific styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4A5568;
+    margin-top: 6px;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #B39DDB;
+    border-radius: 8px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    color: #1e1e1e;
+    line-height: 1.4;
+    padding: 8px 12px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    box-shadow: 3px 3px 0px rgba(179, 157, 219, 0.3);
+    transition: all 0.2s ease;
+}
+
+/* Add helpful focus states */
+input:focus, textarea:focus {
+    background: #FFFFFF;
+    border-color: #9575CD;
+    box-shadow: 4px 4px 0px #B39DDB;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Custom Stamp Button */
+.stamp-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #F48FB1; /* A pop of pink for the seal/stamp */
+    color: white;
+    font-family: 'Chewy', cursive;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 8px;
+    /* Stamp edge effect */
+    border: 3px dashed #fff;
+    box-shadow: 0 0 0 4px #F48FB1, 4px 4px 0px #1e1e1e;
+    cursor: pointer;
+    transform: rotate(-3deg);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stamp-btn:hover {
+    transform: rotate(2deg) scale(1.1);
+    box-shadow: 0 0 0 4px #F48FB1, 6px 6px 0px #1e1e1e;
+    background-color: #F06292;
+}
+
+.stamp-btn:active {
+    transform: rotate(0deg) scale(0.95);
+    box-shadow: 0 0 0 4px #F48FB1, 0px 0px 0px #1e1e1e;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+    .paper-sheet {
+        padding: 30px 20px 30px 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 3rem;
+    }
+}

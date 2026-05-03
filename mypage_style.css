@@ -1,0 +1,357 @@
+:root {
+    --bg-pink: #dcd6f7;
+    /* Soft Lavender Background */
+    --paper-white: #fffdf0;
+    --ink-color: #2c3e50;
+    --line-color: #bdc3c7;
+    --scribble-color: #a29bfe;
+    --accent-blue: #74b9ff;
+    --accent-mint: #55efc4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: var(--bg-pink);
+    color: var(--ink-color);
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Doodles Container */
+.doodles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.doodle {
+    position: absolute;
+    color: var(--ink-color);
+    stroke: currentColor;
+    stroke-width: 5;
+    /* Bolder! */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    opacity: 0.8;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Specific Doodle Positions */
+.doodle-star-1 {
+    top: 8%;
+    left: 2%;
+    width: 90px;
+    transform: rotate(-10deg);
+    color: #f1c40f;
+}
+
+.doodle-star-2 {
+    top: 12%;
+    right: 5%;
+    width: 100px;
+    transform: rotate(20deg);
+    color: #f1c40f;
+}
+
+.doodle-so-cool {
+    bottom: 8%;
+    left: 5%;
+    width: 180px;
+    color: #ff7675;
+    stroke-width: 6;
+}
+
+.doodle-planet {
+    bottom: 25%;
+    right: 2%;
+    width: 160px;
+    color: #74b9ff;
+}
+
+.doodle-arrow {
+    top: 35%;
+    left: 8%;
+    width: 110px;
+    transform: rotate(160deg);
+    opacity: 0.6;
+}
+
+/* New Doodles */
+.doodle-spiral {
+    top: 55%;
+    left: 2%;
+    width: 120px;
+    color: #a29bfe;
+    opacity: 0.6;
+    animation-delay: 1s;
+}
+
+.doodle-heart {
+    top: 18%;
+    left: 25%;
+    width: 80px;
+    color: #ff7675;
+    transform: rotate(-20deg);
+    opacity: 0.8;
+    animation-delay: 2s;
+    stroke-width: 6;
+}
+
+.doodle-zigzag {
+    bottom: 5%;
+    right: 30%;
+    width: 200px;
+    color: #55efc4;
+    transform: rotate(-5deg);
+    stroke-width: 6;
+}
+
+.doodle-moon {
+    top: 3%;
+    left: 45%;
+    width: 100px;
+    color: #dfe6e9;
+    opacity: 0.8;
+    animation-duration: 6s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(var(--r, 0deg));
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(var(--r, 0deg));
+    }
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+}
+
+/* Profile Card - Mac Window / Sketch Pad Hybrid */
+.profile-card {
+    background-color: var(--paper-white);
+    border: 3px solid var(--ink-color);
+    border-radius: 15px;
+    /* Sketchy slightly rounded corners */
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-1deg);
+}
+
+/* Header Section */
+.card-header {
+    border-bottom: 3px solid var(--ink-color);
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: repeating-linear-gradient(45deg,
+            rgba(0, 0, 0, 0.02),
+            rgba(0, 0, 0, 0.02) 10px,
+            rgba(0, 0, 0, 0.05) 10px,
+            rgba(0, 0, 0, 0.05) 20px);
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.star-icon {
+    width: 40px;
+    height: 40px;
+    stroke: var(--ink-color);
+    fill: none;
+    stroke-width: 3;
+}
+
+/* Profile Content Grid */
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 400px;
+}
+
+.left-section {
+    flex: 2;
+    padding: 40px;
+    border-right: 3px solid var(--ink-color);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.right-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: radial-gradient(#dfe6e9 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Info Fields */
+.info-group label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.info-text {
+    font-size: 1.8rem;
+    border-bottom: 2px dashed var(--ink-color);
+    padding-bottom: 5px;
+    width: 100%;
+    color: #555;
+    background: transparent;
+}
+
+/* Dropdowns / Accordions */
+.accordion {
+    border: 3px solid var(--ink-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    background-color: #fab1a0;
+    /* Pastel Orange */
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #ff7675;
+}
+
+.accordion.active .accordion-header {
+    border-bottom: 3px solid var(--ink-color);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background-color: #fff;
+}
+
+.accordion.active .accordion-content {
+    padding: 15px 20px;
+    max-height: 200px;
+    /* Arbitrary height constraint */
+    overflow-y: auto;
+}
+
+.accordion-item-list {
+    list-style: none;
+}
+
+.accordion-item-list li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+    font-size: 1.1rem;
+}
+
+/* Saved Events Color Variant */
+.saved-events .accordion-header {
+    background-color: #74b9ff;
+    /* Pastel Blue */
+}
+
+.saved-events .accordion-header:hover {
+    background-color: #0984e3;
+    color: white;
+}
+
+/* Profile Picture Frame */
+.profile-pic-container {
+    width: 200px;
+    height: 250px;
+    border: 3px solid var(--ink-color);
+    position: relative;
+    background: white;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-doodle {
+    width: 80%;
+    height: 80%;
+    opacity: 0.8;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(10%) contrast(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-body {
+        flex-direction: column-reverse;
+    }
+
+    .left-section {
+        border-right: none;
+        border-top: 3px solid var(--ink-color);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}

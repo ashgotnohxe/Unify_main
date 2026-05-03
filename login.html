@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIFY - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+    <!-- Back to Home -->
+    <nav>
+    <a href="index.html" class="back-link" style="position: absolute; top: 20px; left: 20px; font-family: 'Patrick Hand', cursive; font-size: 1.5rem; color: #2e2e2e; text-decoration: none; z-index: 100;">← Back to Home</a>
+    </nav>
+
+    <!-- Background Doodles (from Homepage) -->
+    <div class="background-doodles" aria-hidden="true" role="presentation">
+        <svg class="doodle star-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.4 9.6H22.4L16 14.4L18.4 22L12 17.2L5.6 22L8 14.4L1.6 9.6H9.6L12 2Z" stroke="#C7C4E0"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <svg class="doodle flower-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M12 2C13.1 4.2 15.3 5.3 17.5 5.3C15.3 5.3 13.1 6.4 12 8.6C10.9 6.4 8.7 5.3 6.5 5.3C8.7 5.3 10.9 4.2 12 2Z"
+                fill="#CFE7F5" />
+            <path
+                d="M12 15.4C13.1 17.6 15.3 18.7 17.5 18.7C15.3 18.7 13.1 19.8 12 22C10.9 19.8 8.7 18.7 6.5 18.7C8.7 18.7 10.9 17.6 12 15.4Z"
+                fill="#CDEEE6" />
+        </svg>
+        <svg class="doodle cloud-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.132 20.177 10.244 17.819 10.034C17.6 7.227 15.266 5 12.5 5C10.158 5 8.113 6.591 7.422 8.791C4.945 9.074 3 11.233 3 14C3 16.761 5.239 19 8 19H17.5Z"
+                fill="#FFFFFF" fill-opacity="0.9" />
+        </svg>
+        <svg class="doodle plane-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 12L22 2L15 22L12 15L2 12Z" stroke="#2E2E2E" stroke-width="2" stroke-linejoin="round"
+                opacity="0.8" />
+        </svg>
+        <svg class="doodle heart-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                stroke="#C7C4E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <!-- Extra Cute Doodles -->
+        <svg class="doodle sparkle-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" fill="#F3D6C6" opacity="0.85" />
+        </svg>
+        <svg class="doodle sparkle-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10L12 0Z" fill="#C7C4E0" opacity="0.85" />
+        </svg>
+        <svg class="doodle planet-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8" stroke="#C7C4E0" stroke-width="2" />
+            <path d="M2 12C2 12 5 7 12 7C19 7 22 12 22 12" stroke="#C7C4E0" stroke-width="2" opacity="0.85" />
+            <path d="M2 12C2 12 5 17 12 17C19 17 22 12 22 12" stroke="#C7C4E0" stroke-width="2" opacity="0.85"
+                stroke-dasharray="2 2" />
+        </svg>
+        <svg class="doodle butterfly-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M12 12C12 12 12 8 8 8C4 8 4 12 8 12C4 12 4 16 8 16C12 16 12 12 12 12ZM12 12C12 12 12 8 16 8C20 8 20 12 16 12C20 12 20 16 16 16C12 16 12 12 12 12Z"
+                fill="#9B96C7" opacity="0.5" />
+        </svg>
+    </div>
+
+    <!-- Main Scribble Login Card -->
+    <main class="login-wrapper">
+        <section class="scribble-card">
+            <header class="card-header">
+                <h2>Join the Club</h2>
+                <p class="subtitle">Dive into the chaos. Let's make something awesome together!</p>
+            </header>
+
+            <form action="#" method="POST" class="scribble-form">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@chitkara.edu.in" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="login-btn">Log In!</button>
+            </form>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <div class="social-login">
+                <a href="#" class="social-icon" aria-label="Login with Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon google-icon" aria-label="Login with Google">
+                    <i class="fab fa-google"></i>
+                </a>
+            </div>
+
+            <p class="signup-link">
+                New here? <a href="home.html">Create an account.</a>
+            </p>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <script src="form-validation.js"></script>
+    <script src="cursor.js"></script>
+</body>
+

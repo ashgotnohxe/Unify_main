@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fests - UNIFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eventspage.css">
+    <link rel="stylesheet" href="fests.css">
+    <style>
+        .detail-container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: var(--pastel-lavender);
+        }
+
+        .detail-card {
+            background-color: var(--mist-white);
+            border: 3px solid var(--charcoal-gray);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-hover);
+            margin-bottom: 40px;
+        }
+
+        .detail-illustration {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .register-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: var(--soft-mint);
+            border: 2px solid var(--charcoal-gray);
+            border-radius: 50px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.5rem;
+            color: var(--charcoal-gray);
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .register-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 4px 0px var(--pastel-lavender);
+        }
+    </style>
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+    <!-- Background Doodles -->
+    <div class="background-doodles">
+        <svg class="doodle squiggle-2" viewBox="0 0 50 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 10 Q 12 0, 25 10 T 48 10" stroke="#EDBAA1" stroke-width="2" stroke-linecap="round" fill="none" />
+        </svg>
+        <svg class="doodle mic-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" fill="#9B96C7" opacity="0.6" />
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#9B96C7" stroke-width="2" stroke-linecap="round" />
+            <line x1="12" y1="19" x2="12" y2="23" stroke="#9B96C7" stroke-width="2" stroke-linecap="round" />
+            <line x1="8" y1="23" x2="16" y2="23" stroke="#9B96C7" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg class="doodle star-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.4 9.6H22.4L16 14.4L18.4 22L12 17.2L5.6 22L8 14.4L1.6 9.6H9.6L12 2Z" fill="#F3D6C6" opacity="0.8" />
+        </svg>
+        <svg class="doodle cloud-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 19C19.9853 19 22 16.9853 22 14.5C22 12.132 20.177 10.244 17.819 10.034C17.6 7.227 15.266 5 12.5 5C10.158 5 8.113 6.591 7.422 8.791C4.945 9.074 3 11.233 3 14C3 16.761 5.239 19 8 19H17.5Z" fill="#A5D0EB" fill-opacity="0.6" />
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav style="width: 100%; max-width: 800px; padding: 20px 0;">
+        <a href="eventspage.html" class="back-link" style="position: absolute; top: 20px; left: 20px; z-index: 100;">← Back to Events</a>
+    </nav>
+
+    <!-- Main Fests Grid -->
+    <main id="mainGrid" class="events-grid" style="margin: 5rem auto 0; max-width: 1000px; padding: 0 20px;">
+        <article class="event-card" onclick="showSection('cultural')">
+            <div class="card-illustration fest-illustration">
+                <svg viewBox="0 0 100 100" class="illustration-svg">
+                    <path d="M50 20L80 70H20L50 20Z" fill="#F3D6C6" opacity="0.7" />
+                    <circle cx="50" cy="50" r="10" stroke="#2E2E2E" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="card-content">
+                <h2>Cultural Fest</h2>
+                <p class="description">Dance, music, and drama.</p>
+            </div>
+            <div class="pin"></div>
+        </article>
+
+        <article class="event-card" onclick="showSection('food_carnival')">
+            <div class="card-illustration fest-illustration">
+                <svg viewBox="0 0 100 100" class="illustration-svg">
+                    <circle cx="50" cy="50" r="30" fill="#EDBAA1" opacity="0.6" />
+                    <path d="M50 50L80 50" stroke="#2E2E2E" stroke-width="2" />
+                    <path d="M50 50L50 20" stroke="#2E2E2E" stroke-width="2" />
+                </svg>
+            </div>
+            <div class="card-content">
+                <h2>Food Carnival</h2>
+                <p class="description">Tastes from around the world.</p>
+            </div>
+            <div class="pin"></div>
+        </article>
+    </main>
+
+    <div id="sectionDetails" style="display: none; padding-top: 2rem;">
+
+    <div class="detail-container">
+        
+        <!-- ==================== CULTURAL FEST ==================== -->
+        <div id="cultural" class="fest-section">
+            <div class="detail-card">
+                <svg viewBox="0 0 100 100" class="detail-illustration">
+                    <path d="M50 20L80 70H20L50 20Z" fill="#F3D6C6" opacity="0.7" />
+                    <circle cx="50" cy="50" r="10" stroke="#2E2E2E" stroke-width="3" />
+                    <path d="M30 80Q50 90 70 80" stroke="#2E2E2E" stroke-width="2" fill="none" />
+                </svg>
+                <span class="category-tag">Fests</span>
+                <h1 style="font-size: 3rem; margin: 20px 0;">Cultural Fest</h1>
+                <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                    <span class="time" style="font-size: 1.2rem;">🕒 All Day, Next Friday</span>
+                    <span class="venue" style="font-size: 1.2rem;">📍 Main Auditorium</span>
+                </div>
+                <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    The biggest event of the year! Dance, music, drama, and fashion. Come witness the talent of UNIFY.
+                    <br><br>
+                    <strong>Highlights:</strong> Battle of Bands, Fashion Show, and Celebrity Night.
+                </p>
+                <a href="#" class="register-btn register-button" data-event="Cultural Fest">Buy Tickets</a>
+            </div>
+        </div>
+
+        <!-- ==================== FOOD CARNIVAL ==================== -->
+        <div id="food_carnival" class="fest-section">
+            <div class="detail-card">
+                <svg viewBox="0 0 100 100" class="detail-illustration">
+                    <circle cx="50" cy="50" r="30" fill="#EDBAA1" opacity="0.6" />
+                    <path d="M50 20L50 80" stroke="#2E2E2E" stroke-width="2" />
+                    <path d="M20 50L80 50" stroke="#2E2E2E" stroke-width="2" />
+                    <path d="M30 30L70 70" stroke="#2E2E2E" stroke-width="2" />
+                    <path d="M70 30L30 70" stroke="#2E2E2E" stroke-width="2" />
+                </svg>
+                <span class="category-tag">Fests</span>
+                <h1 style="font-size: 3rem; margin: 20px 0;">Food Carnival</h1>
+                <div class="meta-info" style="justify-content: center; gap: 30px; margin-bottom: 30px; border: none;">
+                    <span class="time" style="font-size: 1.2rem;">🕒 5:00 PM Saturday</span>
+                    <span class="venue" style="font-size: 1.2rem;">📍 Open Air Theatre</span>
+                </div>
+                <p class="description" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                    A celebration of flavors! Stalls from famous city eateries and student chefs. Music, food, and fun.
+                    <br><br>
+                    <strong>Must Try:</strong> The Spicy Ramen Challenge and Churros Stall.
+                </p>
+                <a href="#" class="register-btn register-button" data-event="Food Carnival">Free Entry</a>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById('mainGrid').style.display = 'none';
+            document.getElementById('sectionDetails').style.display = 'flex';
+            document.getElementById('sectionDetails').style.flexDirection = 'column';
+            document.getElementById('sectionDetails').style.alignItems = 'center';
+            
+            document.querySelectorAll('.fest-section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'flex';
+            window.scrollTo(0,0);
+        }
+
+        function showGrid() {
+            document.getElementById('mainGrid').style.display = 'grid';
+            document.getElementById('sectionDetails').style.display = 'none';
+            window.scrollTo(0,0);
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <script src="registration.js"></script>
+    <script src="cursor.js"></script>
+</body>
+
+</html>

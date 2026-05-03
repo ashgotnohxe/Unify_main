@@ -1,0 +1,367 @@
+/* Color Variables (Matching Homepage) */
+*:focus {
+    outline: none !important;
+}
+
+:root {
+    --soft-cloud: #F6F7F9;
+    --mist-white: #FFFFFF;
+    --charcoal-gray: #2E2E2E;
+
+    /* Accents */
+    --pastel-lavender: #9B96C7;
+    --powder-blue: #A5D0EB;
+    --soft-mint: #9CDBC9;
+    --blush-peach: #EDBAA1;
+
+    /* Shadows */
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 25px 50px -10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    background-color: #CDEEE6;
+    /* User requested Soft Mint */
+    color: var(--charcoal-gray);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+a,
+button,
+.event-card,
+.filter-tab {
+    cursor: pointer;
+}
+
+/* Header & Filters */
+.events-header {
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+.events-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: var(--charcoal-gray);
+}
+
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    border: 2px solid var(--charcoal-gray);
+    background: transparent;
+    border-radius: 50px;
+    /* Pill shape */
+    cursor: pointer;
+}
+
+.filter-tab.active {
+    background-color: var(--powder-blue);
+    border-color: var(--charcoal-gray);
+    box-shadow: 3px 3px 0px var(--charcoal-gray);
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 5;
+    padding-bottom: 50px;
+}
+
+/* Event Card Transitions */
+.event-card {
+    background-color: var(--mist-white);
+    border: 2px solid var(--charcoal-gray);
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    padding: 20px;
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    /* Removed CSS transition; will be handled by GSAP */
+    opacity: 1;
+}
+
+.event-count-bubble {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--blush-peach);
+    color: var(--charcoal-gray);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Patrick Hand', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid var(--charcoal-gray);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.event-card.hidden {
+    display: none;
+}
+
+/* Card Content */
+.card-illustration {
+    width: 100%;
+    height: 150px;
+    background-color: var(--soft-cloud);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-svg {
+    width: 80px;
+    height: 80px;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: var(--soft-mint);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--charcoal-gray);
+}
+
+.event-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--charcoal-gray);
+}
+
+.description {
+    font-family: 'Outfit', sans-serif;
+    /* Readable sans for body text */
+    font-size: 0.95rem;
+    color: var(--ash-gray);
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.meta-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--charcoal-gray);
+    font-weight: bold;
+    border-top: 1px dashed var(--light-fog);
+    padding-top: 15px;
+}
+
+/* Pin Decoration */
+.pin {
+    width: 12px;
+    height: 12px;
+    background-color: var(--pin-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5), 1px 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+/* Background Doodles */
+.background-doodles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.doodle {
+    position: absolute;
+    opacity: 0.6;
+}
+
+/* Doodle Positions (Scattered) */
+.star-1 {
+    top: 10%;
+    left: 5%;
+    width: 50px;
+}
+
+.cloud-1 {
+    top: 20%;
+    right: 10%;
+    width: 100px;
+}
+
+.squiggle-1 {
+    bottom: 15%;
+    left: 10%;
+    width: 120px;
+    transform: rotate(-10deg);
+}
+
+.planet-1 {
+    top: 40%;
+    right: 5%;
+    width: 60px;
+}
+
+.balloon-1 {
+    bottom: 20%;
+    right: 15%;
+    width: 50px;
+}
+
+.coffee-1 {
+    top: 60%;
+    left: 2%;
+    width: 40px;
+}
+
+/* Doodle Positions (Scattered - Event Themed) */
+.ticket-1 {
+    top: 15%;
+    left: 8%;
+    width: 60px;
+    height: 40px;
+    transform: rotate(-15deg);
+    animation: float 7s ease-in-out infinite;
+}
+
+.camera-1 {
+    bottom: 25%;
+    right: 5%;
+    width: 55px;
+    height: 55px;
+    transform: rotate(10deg);
+    animation: float 8s ease-in-out infinite;
+}
+
+.note-1 {
+    top: 20%;
+    right: 12%;
+    width: 30px;
+    height: 30px;
+}
+
+.confetti-1 {
+    top: 50%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+}
+
+.calendar-1 {
+    bottom: 10%;
+    left: 15%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-5deg);
+}
+
+.bulb-event {
+    top: 5%;
+    right: 25%;
+    width: 45px;
+    height: 45px;
+}
+
+.mic-1 {
+    top: 35%;
+    left: 3%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(-10deg);
+}
+
+.trophy-1 {
+    bottom: 35%;
+    right: 3%;
+    width: 45px;
+    height: 45px;
+    transform: rotate(5deg);
+}
+
+.palette-1 {
+    top: 65%;
+    left: 8%;
+    width: 50px;
+    height: 50px;
+}
+
+.gamepad-1 {
+    bottom: 15%;
+    right: 25%;
+    width: 50px;
+    height: 35px;
+    transform: rotate(-15deg);
+}
+
+.pizza-1 {
+    top: 25%;
+    right: 30%;
+    width: 45px;
+    height: 45px;
+    transform: rotate(20deg);
+}
+
+.star-3 {
+    top: 85%;
+    left: 35%;
+    width: 30px;
+    height: 30px;
+}
+
+.star-4 {
+    top: 12%;
+    left: 40%;
+    width: 25px;
+    height: 25px;
+}
+
+.squiggle-2 {
+    bottom: 5%;
+    right: 40%;
+    width: 80px;
+    height: 30px;
+    transform: rotate(-5deg);
+}

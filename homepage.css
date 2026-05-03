@@ -1,0 +1,565 @@
+/* Color Variables */
+*:focus {
+    outline: none !important;
+}
+:root {
+    --soft-cloud: #F6F7F9;
+    --mist-white: #FFFFFF;
+    --charcoal-gray: #2E2E2E;
+    --ash-gray: #6B7280;
+    --light-fog: #E5E7EB;
+
+    /* Accents - Made slightly darker/more vivid for visibility */
+    --pastel-lavender: #9B96C7;
+    --powder-blue: #A5D0EB;
+    --soft-mint: #9CDBC9;
+    --blush-peach: #EDBAA1;
+    --pin-color: var(--powder-blue);
+
+    /* Shadows */
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    /* Softer shadow */
+    --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Patrick Hand', cursive;
+    /* More prominent childish/handwritten font for everything as requested */
+    background-color: var(--soft-cloud);
+    color: var(--charcoal-gray);
+    min-height: 100vh;
+    display: flex;
+    /* Centering layout */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+    font-size: 1.1rem;
+    /* Slightly larger base font size */
+}
+
+/* Background Doodles */
+.background-doodles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Background Doodles Positioning & Animations */
+.doodle {
+    position: absolute;
+    opacity: 0.85;
+}
+
+.star-1 {
+    top: 8%;
+    left: 5%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(-15deg);
+}
+
+.flower-1 {
+    bottom: 10%;
+    right: 5%;
+    width: 60px;
+    height: 60px;
+    opacity: 0.8;
+}
+
+.squiggle-1 {
+    top: 15%;
+    right: 10%;
+    width: 100px;
+    height: 25px;
+    transform: rotate(10deg);
+}
+
+.cloud-1 {
+    top: 45%;
+    left: 2%;
+    width: 120px;
+    height: 80px;
+    opacity: 0.6;
+}
+
+.sun-1 {
+    top: 2%;
+    right: 2%;
+    width: 70px;
+    height: 70px;
+    opacity: 0.7;
+}
+
+.heart-1 {
+    bottom: 5%;
+    left: 35%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(20deg);
+}
+
+/* New Doodles Positions & Specific Animations */
+.arrow-1 {
+    top: 55%;
+    right: 15%;
+    width: 60px;
+    height: 60px;
+    transform: rotate(15deg);
+}
+
+.dot-1 {
+    top: 25%;
+    left: 18%;
+}
+
+.dot-2 {
+    top: 65%;
+    left: 12%;
+}
+
+.dot-3 {
+    bottom: 25%;
+    right: 3%;
+}
+
+.sparkle-1 {
+    top: 12%;
+    left: 30%;
+    width: 30px;
+    height: 30px;
+}
+
+.sparkle-2 {
+    bottom: 15%;
+    left: 55%;
+    width: 25px;
+    height: 25px;
+}
+
+.spiral-1 {
+    bottom: 8%;
+    left: 8%;
+    width: 50px;
+    height: 50px;
+}
+
+.music-1 {
+    top: 10%;
+    right: 30%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(-10deg);
+}
+
+/* Float override */
+
+.planet-1 {
+    top: 18%;
+    left: 75%;
+    width: 60px;
+    height: 60px;
+    opacity: 0.8;
+}
+
+.plane-1 {
+    top: 75%;
+    right: 35%;
+    width: 50px;
+    height: 50px;
+}
+
+.swirl-1 {
+    top: 35%;
+    left: 3%;
+    width: 45px;
+    height: 45px;
+}
+
+.bulb-1 {
+    top: 12%;
+    left: 8%;
+    width: 45px;
+    height: 45px;
+}
+
+.coffee-1 {
+    top: 60%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+}
+
+.book-1 {
+    top: 20%;
+    right: 15%;
+    width: 45px;
+    height: 45px;
+    opacity: 0.8;
+}
+
+.pencil-1 {
+    bottom: 25%;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    opacity: 0.8;
+}
+
+.clip-1 {
+    top: 75%;
+    right: 20%;
+    width: 35px;
+    height: 35px;
+    transform: rotate(-30deg);
+    opacity: 0.8;
+}
+
+.star-2 {
+    top: 45%;
+    left: 15%;
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+}
+
+.text-hello {
+    top: 4%;
+    left: 12%;
+    width: 100px;
+    height: 40px;
+    transform: rotate(-15deg);
+}
+
+.dot-4 {
+    top: 35%;
+    right: 35%;
+}
+
+.dot-5 {
+    bottom: 35%;
+    left: 25%;
+}
+
+.dot-6 {
+    top: 80%;
+    right: 8%;
+}
+
+.dot-7 {
+    bottom: 4%;
+    left: 45%;
+}
+
+.rainbow-1 {
+    top: 40%;
+    right: 2%;
+    width: 60px;
+    height: 30px;
+}
+
+.balloon-1 {
+    top: 30%;
+    left: 80%;
+    width: 40px;
+    height: 60px;
+}
+
+.butterfly-1 {
+    bottom: 20%;
+    left: 5%;
+    width: 35px;
+    height: 35px;
+}
+
+.moon-1 {
+    top: 5%;
+    left: 35%;
+    width: 30px;
+    height: 30px;
+}
+
+.smiley-1 {
+    bottom: 35%;
+    right: 15%;
+    width: 30px;
+    height: 30px;
+}
+
+.heart-2 {
+    top: 75%;
+    left: 25%;
+    width: 25px;
+    height: 25px;
+}
+
+.star-little {
+    bottom: 10%;
+    left: 45%;
+    width: 20px;
+    height: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.logo {
+    font-family: 'Patrick Hand', cursive;
+    /* Handwritten feel */
+    font-size: 6rem;
+    /* Bigger logo */
+    font-weight: 700;
+    color: var(--charcoal-gray);
+    letter-spacing: 2px;
+    margin-bottom: 0.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline like hand-drawn */
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    /* Chonkier underline */
+    background: var(--powder-blue);
+    border-radius: 3px;
+    transform: rotate(-2deg);
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.subtitle {
+    font-family: 'Patrick Hand', cursive;
+    /* Using the same font for consistency */
+    font-size: 1.5rem;
+    color: var(--ash-gray);
+    font-weight: 400;
+}
+
+
+/* Main Board Area - CENTERED ROW */
+.board {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    /* Removed fixed height to let content flow */
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* Spacing between cards */
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    padding: 2rem;
+    perspective: 1000px;
+}
+
+/* Card Styles - Asymmetric & Organic */
+.card {
+    background-color: var(--mist-white);
+    /* Subtle organic shape - not perfectly round */
+    border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+    padding: 2.5rem;
+    width: 260px;
+    min-height: 300px;
+    /* Removed absolute positioning */
+    position: relative;
+    box-shadow: var(--shadow-soft);
+    border: 3px solid var(--pastel-lavender);
+    /* Updated to purple border */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    /* meaningful start state for animation */
+}
+
+/* Inner Photo Area - Slightly Rotated */
+.card .photo-area,
+.card h2,
+.card p {
+}
+
+
+/* Pin Styles */
+.pin {
+    width: 20px;
+    /* Bigger pin */
+    height: 20px;
+    background-color: var(--pin-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.pin::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+
+
+/* Refined Hover Transition - Base - Snappier & More Satisfying */
+.card {
+}
+
+/* Specific Asymmetry Per Card - SCATTERED & ROTATED */
+.card-events {
+    z-index: 5;
+    --base-rotation: -4deg;
+    --scatter-y: 10px;
+    border-radius: 20px 25px 22px 18px;
+}
+
+.card-events .photo-area {
+    transform: rotate(-1.5deg);
+}
+
+
+.card-myspace {
+    z-index: 4;
+    --base-rotation: 3deg;
+    --scatter-y: -15px;
+    border-radius: 24px 18px 25px 20px;
+}
+
+.card-myspace .photo-area {
+    transform: rotate(2deg);
+}
+
+
+.card-feedback {
+    z-index: 3;
+    --base-rotation: -5deg;
+    --scatter-y: 5px;
+    border-radius: 22px 20px 18px 25px;
+}
+
+.card-feedback .photo-area {
+    transform: rotate(-2.5deg);
+}
+
+
+.card-soon {
+    z-index: 2;
+    --base-rotation: 2deg;
+    --scatter-y: 20px;
+    /* opacity: 0.7; Removed to prevent flash before animation */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px 22px 20px 18px;
+}
+
+.card-soon .photo-area {
+    transform: rotate(1.5deg);
+}
+
+
+/* Typography inside cards */
+.card h2 {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.5rem;
+    /* Bigger headers */
+    margin-bottom: 0.8rem;
+    color: var(--charcoal-gray);
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: var(--ash-gray);
+    line-height: 1.6;
+}
+
+
+/* Navigation Footer */
+.footer-nav {
+    margin-top: 4rem;
+    /* More space */
+    display: flex;
+    gap: 3rem;
+    font-family: 'Patrick Hand', cursive;
+    /* Use childish font here too */
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: var(--ash-gray);
+    position: relative;
+}
+
+.footer-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* thicker underline */
+    bottom: -4px;
+    left: 0;
+    background-color: var(--powder-blue);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .board {
+        flex-direction: column;
+        height: auto;
+        padding-top: 2rem;
+        gap: 3rem;
+    }
+
+    .card {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        /* Remove rotation on mobile for readability */
+        margin-bottom: 30px;
+        width: 90%;
+        max-width: 340px;
+    }
+
+    .card:hover {
+        transform: scale(1.02) !important;
+    }
+
+    .logo {
+        font-size: 4rem;
+    }
+}

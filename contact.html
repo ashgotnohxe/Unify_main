@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the UNIFY team. Drop us a line with questions or feedback!">
+    <title>UNIFY - Contact Us (Notebook)</title>
+    <!-- New Notebook Paper Aesthetic -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cursor.css">
+</head>
+
+<body>
+    <!-- Main Navigation -->
+    <nav aria-label="Breadcrumb navigation">
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Drop us a line!</h1>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="paper-container">
+        <!-- Masking tape decoration -->
+        <div class="tape" aria-hidden="true" role="presentation"></div>
+
+        <!-- The Notebook Paper form container -->
+        <section class="paper-sheet" aria-labelledby="form-title">
+            <!-- Decorative punch hole -->
+            <div class="hole-bottom" aria-hidden="true" role="presentation"></div>
+            
+            <h2 id="form-title" class="sr-only" style="display:none;">Contact Details Form</h2>
+            
+            <form action="#" method="POST" class="contact-form">
+                <fieldset style="border: none; padding: 0; margin: 0;">
+                    <legend class="sr-only" style="display:none;">Message Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="to">To:</label>
+                        <input type="text" id="to" name="to" value="UNIFY Team ✨" readonly aria-readonly="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">From (Name):</label>
+                        <input type="text" id="name" name="name" placeholder="Who's writing?" required aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Reply To (Email):</label>
+                        <input type="email" id="email" name="email" placeholder="Your email..." required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Start writing here..." required aria-required="true"></textarea>
+                    </div>
+
+                    <button type="submit" class="stamp-btn" onclick="event.preventDefault(); alert('Message sent via Airmail! ✈️');">
+                        SEND
+                    </button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+    <script src="form-validation.js"></script>
+    <script src="cursor.js"></script>
+</body>
+
+</html>
